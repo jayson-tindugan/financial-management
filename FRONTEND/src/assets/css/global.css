@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index:1;
     color: var(--whitesmoke);
 }
 .container-bg {
@@ -84,6 +85,7 @@
     height: calc(100vh - 60px);
     background-color: var(--darkgreen);
     font-size: 1.125rem;
+    z-index: 1;
     transform: translateX(-100%);
     transition: all 0.3s ease-in-out;
 }
