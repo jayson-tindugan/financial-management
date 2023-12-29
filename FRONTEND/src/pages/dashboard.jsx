@@ -90,7 +90,7 @@ function Userdashboard() {
                                         />
                                     </div>
                                     <div className="count">
-                                        <h3>&#x20B1; {count.donationCount}</h3>
+                                        <h3>&#x20B1;{count.donationCount}</h3>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@ function Userdashboard() {
                                     </div>
                                     <div className="count">
                                         <h3>
-                                            &#x20B1; {count.collectionCount}
+                                            &#x20B1;{count.collectionCount}
                                         </h3>
                                     </div>
                                 </div>
@@ -122,7 +122,7 @@ function Userdashboard() {
                                         />
                                     </div>
                                     <div className="count">
-                                        <h3>&#x20B1; {count.igpCount}</h3>
+                                        <h3>&#x20B1;{count.igpCount}</h3>
                                     </div>
                                 </div>
                             </div>

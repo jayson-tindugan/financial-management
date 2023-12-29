@@ -24,7 +24,7 @@ const OfficerTable = () => {
     };
   
     const columns = [
-      { name: 'User ID', selector: 'userId', sortable: true },
+      { name: 'No.', selector: 'userId', sortable: true },
       { name: 'Name', selector: 'firstName', sortable: true, cell: (row) => `${row.firstName} ${row.middleName} ${row.lastName}` },
       { name: 'ID Number', selector: 'idNumber', sortable: true },
       { name: 'Date Added', selector: 'dateAdded', sortable: true, cell: (row) => formatDateAdded(row) },

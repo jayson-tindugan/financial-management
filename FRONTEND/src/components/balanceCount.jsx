@@ -27,10 +27,12 @@ export const getBalanceCounts = async () => {
   const response = await axios.get('http://localhost:8001/transaction/totalCashflow');
   const cashflowData = response.data;
   
-  const collectionCount = cashflowData.find(item => item.allocationType === 'COLLECTION')?.netProfitLoss || 0;
-  const donationCount = cashflowData.find(item => item.allocationType === 'DONATION')?.netProfitLoss || 0;
-  const igpCount = cashflowData.find(item => item.allocationType === 'IGP')?.netProfitLoss || 0;
-
+  const collection = cashflowData.find(item => item.allocationType === 'COLLECTION')?.netProfitLoss || 0;
+  const donation = cashflowData.find(item => item.allocationType === 'DONATION')?.netProfitLoss || 0;
+  const igp = cashflowData.find(item => item.allocationType === 'IGP')?.netProfitLoss || 0;
+  let collectionCount = Number(collection).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  let donationCount = Number(donation).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  let igpCount = Number(igp).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   return { collectionCount, donationCount, igpCount };
 };
 
